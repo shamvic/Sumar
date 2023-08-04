@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sumar</string>
+    <string name="multiplication">Multiplicación</string>
+    <string name="division">División</string>
+    <string name="addition">Suma</string>
+    <string name="done">Hecho</string>
+    <string name="menu">Menu</string>
+    <string name="begin">Comenzar</string>
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/background_app"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="16dp"
+    tools:context=".AdditionActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:backgroundTint="@color/background_app"
+            android:text="+"
+            android:textColor="@color/background_tv"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:id="@+id/tvNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/element_border_style"
+            android:paddingHorizontal="8dp"
+            android:textAlignment="center"
+            android:paddingBottom="4dp"
+            android:layout_marginEnd="40dp"
+            android:text="n"
+            android:textColor="@color/text"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvAddOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:backgroundTint="@color/background_app"
+            android:text="+"
+            android:textColor="@color/background_tv"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/element_border_style"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="4dp"
+            android:text="n"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switchAddOper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="22dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="26dp"
+        android:background="@color/background_app"
+        android:paddingHorizontal="8dp"
+        android:textColor="@color/background_tv"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout1" />
+
+    <TextView
+        android:id="@+id/tvCorrectSolution"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="26dp"
+        android:background="@drawable/element_border_style"
+        android:paddingHorizontal="8dp"
+        android:text="0000"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/text"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTimer" />
+
+    <TextView
+
+        android:id="@+id/tvQualification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="@color/background_app"
+        android:text="V"
+        android:textColor="@color/background_app"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/tvCorrectSolution"
+        app:layout_constraintStart_toEndOf="@+id/tvCorrectSolution"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/etSolution"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/element_border_style"
+        android:paddingHorizontal="8dp"
+        android:textAlignment="viewEnd"
+        android:text=" "
+        android:textColor="@color/text"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:singleLine="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCorrectSolution"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSolution"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:paddingHorizontal="20dp"
+        >
+
+        <Button
+            android:id="@+id/btnBegin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginVertical="10dp"
+            android:text="@string/begin"
+            android:textAllCaps="true"
+            android:paddingVertical="6dp"
+            android:textSize="24sp"
+            style="?attr/materialButtonOutlinedStyle"
+            app:strokeColor="@color/border_style"
+            app:cornerRadius="20dp"
+            app:strokeWidth="2dp"
+            android:textColor="@color/border_style"
+
+            />
+
+        <Button
+
+            android:id="@+id/btnMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            style="?attr/materialButtonOutlinedStyle"
+            app:strokeColor="@color/border_style"
+            app:strokeWidth="2dp"
+            app:cornerRadius="20dp"
+            android:text="@string/menu"
+            android:textColor="@color/border_style"
+            />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:text="@string/done"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            style="?attr/materialButtonOutlinedStyle"
+            app:strokeColor="@color/border_style"
+            app:cornerRadius="20dp"
+            app:strokeWidth="2dp"
+            android:textColor="@color/border_style"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
